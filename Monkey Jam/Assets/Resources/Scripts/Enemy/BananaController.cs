@@ -12,7 +12,7 @@ public class BananaController : MonoBehaviour
     private bool hasStopped = false;
 
     [SerializeField] private Transform target;
-    [SerializeField] private float stoppingDistance = 3;
+    private float stoppingDistance = 3;
 
     private void Start()
     {
@@ -79,5 +79,6 @@ public class BananaController : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
         anim = GetComponentInChildren<Animator>();
         stats = GetComponent<BananaStats>();
+        target = PlayerController.instance;
     }
 }

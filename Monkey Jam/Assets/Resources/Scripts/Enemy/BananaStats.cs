@@ -22,6 +22,7 @@ public class BananaStats : CharacterStats
     public override void Die()
     {
         base.Die();
+        PlayerHUD.instance.UpdateScoreAmount();
         Destroy(gameObject);
     }
 
